@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eduardo Paolozzi</title>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style> #map { height: 700px; } </style>
+
+  
+  
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      padding: 50px;
+    }
+    .streetview{
+  margin-bottom: 1.5em; /* Adjusts the space below each div */
+}
+  </style>
+</head>
+<body>
+  <h1>Street View Eduardo Paolozzi</h1>
+
+  
+  
+  
+
+  <iframe
+  width="1000"
+  height="550"
+  frameborder="0" style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=51.5289803,-0.1275327&heading=10&pitch=38&fov=100"
+  allowfullscreen>
+</iframe>
+  <div class="streetview">Newton</div>
+  
+    <iframe
+  width="1000"
+  height="550"
+  frameborder="0" style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=55.9514369,-3.2248745&heading=10&pitch=33&fov=100"
+  allowfullscreen>
+</iframe>
+    <div class="streetview"></div>
+
+  
+  
+  
+      <iframe
+  width="1000"
+  height="550"
+  frameborder="0" style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=52.2091479,0.1243578&heading=180&pitch=-2&fov=70"
+  allowfullscreen>
+</iframe>
+  <div class="streetview"></div>
+
+
+  <div id="map"></div>
+  <script>
+    fetch('map_data.json')
+      .then(response => response.json())
+      .then(data => {
+        var map = L.map("map").setView([0, 0], 2);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+        data.forEach(marker => {
+          L.marker([marker.lat, marker.lon]).addTo(map).bindPopup(marker.title);
+        });
+      });
+  </script>
+
+</body>
+</html>

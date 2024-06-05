@@ -1,79 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Eduardo Paolozzi</title>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <style> #map { height: 700px; } </style>
+  <head>
+    <title>Eduardo Paolozzi</title>
 
-  
-  
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    
+    
+    <style>
+      h1,h2 {
+        font-family: "Press Start 2P", cursive;
+        text-align: center;
+        padding: 50px;
+      }
+      .streetview {
+        margin-bottom: 150px;
+        margin-top: 20px; 
+        text-align:left;
+        width:1000px;
+        display: inline-block;
+          font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Street View Eduardo Paolozzi</h1>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-  <style>
-    body {
-      font-family: 'Press Start 2P', cursive;
-      text-align: center;
-      padding: 50px;
-    }
-    .streetview{
-  margin-bottom: 1.5em; /* Adjusts the space below each div */
-}
-  </style>
-</head>
-<body>
-  <h1>Street View Eduardo Paolozzi</h1>
-
-  
-  
-  
-
-  <iframe
-  width="1000"
-  height="550"
-  frameborder="0" style="border:0"
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=51.5289803,-0.1275327&heading=10&pitch=38&fov=100"
-  allowfullscreen>
-</iframe>
-  <div class="streetview">Newton</div>
-  
     <iframe
-  width="1000"
-  height="550"
-  frameborder="0" style="border:0"
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=55.9514369,-3.2248745&heading=10&pitch=33&fov=100"
-  allowfullscreen>
-</iframe>
-    <div class="streetview"></div>
+      width="1000"
+      height="550"
+      frameborder="0"
+      style="border: 0"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=51.5289803,-0.1275327&heading=10&pitch=38&fov=100"
+      allowfullscreen
+    >
+    </iframe>
+    <div class="streetview"><h2>Newton</h2></div>
 
-  
-  
-  
-      <iframe
-  width="1000"
-  height="550"
-  frameborder="0" style="border:0"
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=52.2091479,0.1243578&heading=180&pitch=-2&fov=70"
-  allowfullscreen>
-</iframe>
-  <div class="streetview"></div>
+    <iframe
+      width="1000"
+      height="550"
+      frameborder="0"
+      style="border: 0"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=55.9514369,-3.2248745&heading=10&pitch=33&fov=100"
+      allowfullscreen
+    >
+    </iframe>
+    <div class="streetview">Master of the Universe</div>
 
-  <!--
-  <div id="map"></div>
-  <script>
-    fetch('map_data.json')
-      .then(response => response.json())
-      .then(data => {
-        var map = L.map("map").setView([0, 0], 2);
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
-        data.forEach(marker => {
-          L.marker([marker.lat, marker.lon]).addTo(map).bindPopup(marker.title);
+    <iframe
+      width="1000"
+      height="550"
+      frameborder="0"
+      style="border: 0"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=52.2091479,0.1243578&heading=180&pitch=-2&fov=70"
+      allowfullscreen
+    >
+    </iframe>
+    <div class="streetview">Daedalus on Wheels</div>
+
+    <div id="map"></div>
+    <script>
+      fetch("map_data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          var map = L.map("map").setView([0, 0], 2);
+          L.tileLayer(
+            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          ).addTo(map);
+          data.forEach((marker) => {
+            L.marker([marker.lat, marker.lon])
+              .addTo(map)
+              .bindPopup(marker.title);
+          });
         });
-      });
-  </script>
--->
-</body>
+    </script>
+  </body>
 </html>
