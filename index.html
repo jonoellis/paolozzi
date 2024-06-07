@@ -96,74 +96,13 @@
       <div class="location">Located outside the British Library, London</div>
     </div>
 
-    <iframe
-      width="1000"
-      height="550"
-      frameborder="0"
-      style="border: 0"
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=55.9514369,-3.2248745&heading=10&pitch=33&fov=100"
-      allowfullscreen
-    >
-    </iframe>
-    <div class="streetview">
-      <h2>Master of the Universe</h2>
-      <div class="year">1989</div>
-      <div class="location"></div>
-    </div>
+   
 
-    <iframe
-      width="1000"
-      height="550"
-      frameborder="0"
-      style="border: 0"
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=52.2091479,0.1243578&heading=180&pitch=-2&fov=70"
-      allowfullscreen
-    >
-    </iframe>
-    <div class="streetview">
-      <h2>Daedalus on Wheels</h2>
-      <div class="year">1994</div>
-      <div class="location"></div>
-    </div> -->
+
+-->
 
     
-    <!--   <iframe
-      width="1000"
-      height="550"
-      frameborder="0"
-      style="border: 0"
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs
-&location={paolozzi.coords}
-&heading={paolozzi.heading}
-&pitch={paolozzi.pitch}
-&fov={paolozzi.fov}"
-      allowfullscreen
-    >
-    </iframe>
-    <div class="streetview">
-      <h2>{paolozzi.title}</h2>
-      <div class="year">{paolozzi.year}</div>
-      <div class="location">{paolozzi.location}</div>
-    </div>
-
-
-[{"coords":"55.9514369,-3.2248745","heading":"10","pitch":"33","fov":"100","title":"Master of the Universe","year":"1989","location":"Outside the British Library in London"},{"coords":"52.2091479,0.1243578","heading":"180","pitch":"-2","fov":"70","title":"Daedalus on Wheels","year":"1994","location":"Outside the Modern Art Gallery"}]
-
-
-
-  <script>
-    fetch('paolozzi.json')
-      .then(response => response.json())
-      .then(paolozzi => {
-        var generatedHTML = 
-            
-          
-        });
-      });
-  </script> -->
+   
 <div id="paolozzi">
   
     </div>
@@ -195,7 +134,7 @@
           </div>
         `;
       });
-      document.body.innerHTML += generatedHTML;
+      document.getElementById('paolozzi').innerHTML = generatedHTML;
     })
     .catch(error => console.error('Error fetching the JSON file:', error));
 </script>
