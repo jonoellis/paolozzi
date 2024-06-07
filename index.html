@@ -8,70 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
     />
 
-    <style>
-      h1 {
-        font-family: "Press Start 2P", cursive;
-        text-align: left;
-        padding: 50px;
-        font-size: 40px;
-      }
-
-      h2 {
-        font-family: "Press Start 2P", cursive;
-        text-align: left;
-        font-size: 30px;
-      }
-
-      .streetview {
-        margin-left: 150px;
-        margin-bottom: 150px;
-        margin-top: 20px;
-        text-align: left;
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 200;
-        font-style: normal;
-        font-variation-settings: "slnt" 0;
-        font-size: 24px;
-      }
-
-      .year {
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 200;
-        font-style: normal;
-        font-variation-settings: "slnt" 0;
-        font-size: 24px;
-        background:white;display: inline-block 
-      }
-      
-      .location {
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 200;
-        font-style: normal;
-        font-variation-settings: "slnt" 0;
-        font-size: 24px;
-        background:white;display: inline-block 
-      }
-
-      iframe {
-        margin-left: 150px;
-      }
-
-      body {
-        background-image: radial-gradient(#cdf0ea 20%, transparent 20%),
-          radial-gradient(#cdf0ea 20%, transparent 20%);
-        background-color: #f9f9f9;
-        background-position: 0 0, 10px 10px;
-        background-size: 20px 20px;
-      }
-      h3 {
-        font-family: "Press Start 2P", cursive;
-        text-align: left;
-        font-size: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <h1>
@@ -80,39 +17,14 @@
       Street View
     </h1>
 
-<!--     <iframe
-      width="1000"
-      height="550"
-      frameborder="0"
-      style="border: 0"
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=51.5289803,-0.1275327&heading=10&pitch=38&fov=100"
-      allowfullscreen
-    >
-    </iframe>
-    <div class="streetview">
-      <h2>Newton</h2>
-      <div class="year">1995</div>
-      <div class="location">Located outside the British Library, London</div>
-    </div>
-
-   
-
-
--->
-
-    
-   
-<div id="paolozzi">
-  
-    </div>
-<script>
-  fetch('paolozzi.json')
-    .then(response => response.json())
-    .then(paolozziArray => {
-      let generatedHTML = '';
-      paolozziArray.forEach(paolozzi => {
-        generatedHTML += `
+    <div id="paolozzi"></div>
+    <script>
+      fetch("paolozzi.json")
+        .then((response) => response.json())
+        .then((paolozziArray) => {
+          let generatedHTML = "";
+          paolozziArray.forEach((paolozzi) => {
+            generatedHTML += `
           <iframe
             width="1000"
             height="550"
@@ -133,12 +45,14 @@
             <div class="location">${paolozzi.location}</div>
           </div>
         `;
-      });
-      document.getElementById('paolozzi').innerHTML = generatedHTML;
-    })
-    .catch(error => console.error('Error fetching the JSON file:', error));
-</script>
-    
+          });
+          document.getElementById("paolozzi").innerHTML = generatedHTML;
+        })
+        .catch((error) =>
+          console.error("Error fetching the JSON file:", error)
+        );
+    </script>
+
     <h3>Made by <a href="https://ellis.scot">Jono</a></h3>
   </body>
 </html>
