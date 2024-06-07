@@ -53,6 +53,7 @@ h3 {
   background: white;
   margin-left: 150px;
   margin-right: 150px;
+  padding:10px;
 }
 
 .year {
@@ -64,6 +65,8 @@ h3 {
   font-size: 24px;
   background: white;
   margin-right: 150px;
+    padding:10px;
+
 }
 .location {
   font-family: "Inter", sans-serif;
@@ -74,6 +77,8 @@ h3 {
   font-size: 24px;
   background: white;
   margin-right: 150px;
+  padding:10px;
+
 }
 
 iframe {
