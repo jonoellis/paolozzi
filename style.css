@@ -24,16 +24,17 @@ h3 {
   font-family: "Press Start 2P", cursive;
   text-align: left;
   font-size: 10px;
+  padding-bottom: 5px;
 }
 
-#paolozzi{
-    padding-top: 50px;
-
+#paolozzi {
+  padding-top: 50px;
 }
 .streetview {
   margin-left: 150px;
   margin-bottom: 150px;
   margin-top: 20px;
+  margin-right: 150px;
   text-align: left;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -51,23 +52,11 @@ h3 {
   font-variation-settings: "slnt" 0;
   font-size: 24px;
   background: white;
-  margin-left: 150px;
+  margin-left: 140px;
   margin-right: 150px;
-  padding:10px;
+  padding: 10px;
 }
 
-.year {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-  font-variation-settings: "slnt" 0;
-  font-size: 24px;
-  background: white;
-  margin-right: 150px;
-    padding:10px;
-
-}
 .location {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -76,9 +65,6 @@ h3 {
   font-variation-settings: "slnt" 0;
   font-size: 24px;
   background: white;
-  margin-right: 150px;
-  padding:10px;
-
 }
 
 iframe {
