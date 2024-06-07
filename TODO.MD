@@ -10,5 +10,4 @@
 * Add my deets
 * Add social sharing
 
-## Intro
-Nobody needs me to write anything about how Eduardo Paolozzi was one of the pioneers of pop art, nor that he was one of Britain's greatest sculptors. But since he was 
+
