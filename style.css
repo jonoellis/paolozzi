@@ -1,62 +1,66 @@
-  h1 {
-        font-family: "Press Start 2P", cursive;
-        text-align: left;
-        padding: 50px;
-        font-size: 40px;
-      }
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-      h2 {
-        font-family: "Press Start 2P", cursive;
-        text-align: left;
-        font-size: 30px;
-      }
+h1 {
+  font-family: "Press Start 2P", cursive;
+  text-align: left;
+  padding: 50px;
+  font-size: 40px;
+}
 
-      .streetview {
-        margin-left: 150px;
-        margin-bottom: 150px;
-        margin-top: 20px;
-        text-align: left;
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 200;
-        font-style: normal;
-        font-variation-settings: "slnt" 0;
-        font-size: 24px;
-      }
+h2 {
+  font-family: "Press Start 2P", cursive;
+  text-align: left;
+  font-size: 30px;
+}
 
-      .year {
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 200;
-        font-style: normal;
-        font-variation-settings: "slnt" 0;
-        font-size: 24px;
-        background:white;display: inline-block 
-      }
-      
-      .location {
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 200;
-        font-style: normal;
-        font-variation-settings: "slnt" 0;
-        font-size: 24px;
-        background:white;display: inline-block 
-      }
+.streetview {
+  margin-left: 150px;
+  margin-bottom: 150px;
+  margin-top: 20px;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  font-size: 24px;
+}
 
-      iframe {
-        margin-left: 150px;
-      }
+.year {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  font-size: 24px;
+  background: white;
+  display: inline-block;
+}
 
-      body {
-        background-image: radial-gradient(#cdf0ea 20%, transparent 20%),
-          radial-gradient(#cdf0ea 20%, transparent 20%);
-        background-color: #f9f9f9;
-        background-position: 0 0, 10px 10px;
-        background-size: 20px 20px;
-      }
-      h3 {
-        font-family: "Press Start 2P", cursive;
-        text-align: left;
-        font-size: 10px;
-      }
+.location {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  font-size: 24px;
+  background: white;
+  display: inline-block;
+}
+
+iframe {
+  margin-left: 150px;
+}
+
+body {
+  background-image: radial-gradient(#cdf0ea 20%, transparent 20%),
+    radial-gradient(#cdf0ea 20%, transparent 20%);
+  background-color: #f9f9f9;
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+}
+h3 {
+  font-family: "Press Start 2P", cursive;
+  text-align: left;
+  font-size: 10px;
+}
