@@ -1,4 +1,5 @@
 # To do
+* Make it not crash when the page loads them all
 * Make the sheets export everything that's needed for the embed, details, link
 * Make the page powered by the JSON and JavaScript
 * Remove the errors
@@ -9,5 +10,7 @@
 * Add a favicon
 * Add my deets
 * Add social sharing
+* Contact Paolozzi Foundation
+* Can I take inspo from https://greatwavetoday.com/
 
 
