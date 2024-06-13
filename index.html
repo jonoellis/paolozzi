@@ -15,16 +15,16 @@
       <p>
         Artist Sir Eduardo Paolozzi was a pioneer of pop art and one of
         Britain's greatest sculptors. Because of his importance, his works are
-        frequently bought, sold and loaned, and - crucially - change locations.
-        This page details the pieces that I am aware of on outdoor public
+        frequently bought, sold, loaned, and - crucially - relocated.
+        This page details the pieces on outdoor public
         display around the world, and shows them through the medium of Google
-        Street View.
+        Street View. 
       </p>
       <p>
-        Missing one?
+        If you know of a Paolozzi sculpture that's on Street View but missing you can 
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdxh2x_gk_yfr_lIe8XVMSCV0Ads-surfRFdFkycCnS3BLpZw/viewform?usp=sf_link"
-          >Let me know here</a
+          >submit it here</a
         >.
       </p>
     </div>
@@ -37,20 +37,7 @@
           let generatedHTML = "";
           paolozziArray.forEach((paolozzi) => {
             generatedHTML += `
-          <iframe
-            width="1000"
-            height="550"
-            frameborder="0"
-            style="border: 0"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs
-&location=${paolozzi.coords}
-&heading=${paolozzi.heading}
-&pitch=${paolozzi.pitch}
-&fov=${paolozzi.fov}"
-            allowfullscreen
-          >
-          </iframe>
+
           <div class="streetview">
             <h2>${paolozzi.title} (${paolozzi.year})</h2>
             <div class="location">${paolozzi.location}</div>
