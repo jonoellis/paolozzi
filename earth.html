@@ -1,65 +1,22 @@
-    <div id="earth"></div>
-    <script>
-      fetch("earth.json")
-        .then((response) => response.json())
-        .then((earthArray) => {
-          let generatedHTML = "";
-          earthArray.forEach((earth, index) => {
-            const iframeHTML = `
-          <iframe
-            width="1000"
-            height="550"
-            frameborder="0"
-            style="border: 0"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=${earth.coords}&heading=${earth.heading}&pitch=${earth.pitch}&fov=${earth.fov}"
-            allowfullscreen
-          >
-          </iframe>
-        `;
-
-            const divHTML = `
+<div id="earth"></div>
+<script>
+  fetch("earth.json")
+    .then((response) => response.json())
+    .then((earthArray) => {
+      let generatedHTML = "";
+      earthArray.forEach((earth, index) => {
+        const divHTML = `
           <div class="streetview">
             <h2>${earth.title} (${earth.year})</h2>
-            <div class="location">${earth.location}</div>
-            <div class="iframe-container" data-index="${index}">
-              ${
-                index === 0
-                  ? iframeHTML
-                  : '<div class="iframe-placeholder">Click to load</div>'
-              }
-            </div>
+            <div class="location"><a href="${earth.link}">${earth.location}</a></div>
+
           </div>
         `;
 
-            generatedHTML += divHTML;
-          });
+        generatedHTML += divHTML;
+      });
 
-          document.getElementById("earth").innerHTML = generatedHTML;
-
-          const iframeContainers =
-            document.querySelectorAll(".iframe-container");
-          iframeContainers.forEach((container, index) => {
-            if (index !== 0) {
-              container.addEventListener("click", () => {
-                const iframeHTML = `
-              <iframe
-                width="1000"
-                height="550"
-                frameborder="0"
-                style="border: 0"
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAokcS-ZPPZwfc4bP92n4T_6sOq26eHSjs&location=${earthArray[index].coords}&heading=${earthArray[index].heading}&pitch=${Array[index].pitch}&fov=${earthArray[index].fov}"
-                allowfullscreen
-              >
-              </iframe>
-            `;
-                container.innerHTML = iframeHTML;
-              });
-            }
-          });
-        })
-        .catch((error) =>
-          console.error("Error fetching the JSON file:", error)
-        );
-    </script>
+      document.getElementById("earth").innerHTML = generatedHTML;
+    })
+    .catch((error) => console.error("Error fetching the JSON file:", error));
+</script>
