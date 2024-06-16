@@ -11,7 +11,9 @@
 <meta property="og:image" content="https://cdn.glitch.global/4e63f6ae-f808-4d4a-8cbe-a78dcc65600e/Sir%20Eduardo%20Paolozzi%20on%20Street%20View.png?v=1718546297561">
 <meta property="og:site_name" content="Sir Eduardo Paolozzi on Street View">
 <meta name="twitter:card" content="summary_large_image">
-
+    
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" ></script>
   </head>
   <body>
     <h1>
@@ -139,17 +141,45 @@
         );
     </script>
 
+    
+    
+    
+    
+    
+    
+
+  
+  
+          <div class="streetview">
+
+
+            <div id="map"></div></div>
+  <script>
+    fetch('map.json')
+      .then(response => response.json())
+      .then(data => {
+        var map = L.map("map").setView([0, 0], 2);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+        data.forEach(marker => {
+          L.marker(marker.coords.split(',')).addTo(map).bindPopup(marker.title);
+        });
+      });
+  </script>
+    
+    
+    
+    
+    
+    
     <div id="outro" class="text">
       <p>
-        The spreadsheet of sculptures on Street View can be found
+        The list of sculptures on Street View can be found
         <a
           href="https://docs.google.com/spreadsheets/d/1pS0Zt8V66oOkTvnLSCG94J33dzKYjeZ-EvPfQbqQ0e4/edit?gid=0#gid=0"
-          >here</a
-        >, and my ongoing research and scupltures visible on Google Earth can be
-        found
-        <a
+          >in this spreadsheet</a
+        >, and this is the <a
           href="https://docs.google.com/spreadsheets/d/1pS0Zt8V66oOkTvnLSCG94J33dzKYjeZ-EvPfQbqQ0e4/edit?gid=1380045345#gid=1380045345"
-          >here</a
+          >ongoing research and scupltures visible on Google Earth</a
         >. This is not an attempt to document every work by Paolozzi - just a
         focus on the public sculptures - so if you know of a missing outdoor Paolozzi
         sculpture, you can

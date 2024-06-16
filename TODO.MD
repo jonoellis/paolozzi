@@ -1,6 +1,5 @@
 # To do
 * Add country flags?
-* Add the map back in?
 * Remove the errors
 
 

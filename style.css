@@ -88,3 +88,7 @@ h3 {
 iframe {
   /*   margin-left: 150px; */
 }
+
+    #map {
+      height: 500px;
+    }
