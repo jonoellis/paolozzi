@@ -66,6 +66,10 @@ h3 {
   font-variation-settings: "slnt" 0;
   font-size: 24px;
   background: white;
+    padding-top:20px;
+    padding-bottom:20px;
+
+
 }
 .iframe-placeholder {
   font-family: "Inter", sans-serif;
