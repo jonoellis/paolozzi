@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Eduardo Paolozzi</title>
+    <title>Sir Eduardo Paolozzi on Street View</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
@@ -52,7 +52,9 @@
             const divHTML = `
           <div class="streetview">
             <h2>${satellite.title} (${satellite.year})</h2>
-            <div class="location"><a href="${satellite.link}">${satellite.location}</a></div>
+            <div class="location"><a href="${satellite.link}">${
+              satellite.location
+            }</a></div>
             
             <div class="iframe-container" data-index="${index}">
               ${
@@ -96,22 +98,21 @@
         );
     </script>
 
-    
     <div id="outliers" class="text">
       <p>
-        A few other Paolozzi sculptures are visible via aerial photography on Google Earth.
+        A few other Paolozzi sculptures are visible via aerial photography on
+        Google Earth.
       </p>
     </div>
-    
-    
+
     <div id="earth"></div>
-<script>
-  fetch("earth.json")
-    .then((response) => response.json())
-    .then((earthArray) => {
-      let generatedHTML = "";
-      earthArray.forEach((earth, index) => {
-        const divHTML = `
+    <script>
+      fetch("earth.json")
+        .then((response) => response.json())
+        .then((earthArray) => {
+          let generatedHTML = "";
+          earthArray.forEach((earth, index) => {
+            const divHTML = `
           <div class="streetview">
             <h2 class="amber">${earth.title} (${earth.year})</h2>
             <div class="location"><a href="${earth.link}">${earth.location}</a></div>
@@ -119,27 +120,36 @@
           </div>
         `;
 
-        generatedHTML += divHTML;
-      });
+            generatedHTML += divHTML;
+          });
 
-      document.getElementById("earth").innerHTML = generatedHTML;
-    })
-    .catch((error) => console.error("Error fetching the JSON file:", error));
-</script>
+          document.getElementById("earth").innerHTML = generatedHTML;
+        })
+        .catch((error) =>
+          console.error("Error fetching the JSON file:", error)
+        );
+    </script>
 
-    
-    
     <div id="outro" class="text">
       <p>
-        The spreadsheet of scultprures on Street View can be found <a href="https://docs.google.com/spreadsheets/d/1pS0Zt8V66oOkTvnLSCG94J33dzKYjeZ-EvPfQbqQ0e4/edit?gid=0#gid=0">here</a>, and my
-        ongoing research and scupltures visible on Google Earth can be found
-        <a href="https://docs.google.com/spreadsheets/d/1pS0Zt8V66oOkTvnLSCG94J33dzKYjeZ-EvPfQbqQ0e4/edit?gid=1380045345#gid=1380045345">here</a>. I'm not attempting to document every work by Paolozzi - just the public sculptures - so if you know of an outdoor Paolozzi sculpture that's missing,
-        you can
+        The spreadsheet of scultprures on Street View can be found
+        <a
+          href="https://docs.google.com/spreadsheets/d/1pS0Zt8V66oOkTvnLSCG94J33dzKYjeZ-EvPfQbqQ0e4/edit?gid=0#gid=0"
+          >here</a
+        >, and my ongoing research and scupltures visible on Google Earth can be
+        found
+        <a
+          href="https://docs.google.com/spreadsheets/d/1pS0Zt8V66oOkTvnLSCG94J33dzKYjeZ-EvPfQbqQ0e4/edit?gid=1380045345#gid=1380045345"
+          >here</a
+        >. This is not an attempt to document every work by Paolozzi - just a
+        focus on the public sculptures - so if you know of an outdoor Paolozzi
+        sculpture that's missing, you can
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdxh2x_gk_yfr_lIe8XVMSCV0Ads-surfRFdFkycCnS3BLpZw/viewform?usp=sf_link"
           >submit it here</a
         >.
       </p>
+      <p>Sir Eduardo Paolozzi has no blue plaques on any of his homes or workshops in England and there are no public sculptures in his hometown of Leith (although there is a <a href="https://www.google.co.uk/maps/@55.9745287,-3.1720477,3a,75y,280.08h,86.26t/data=!3m6!1e1!3m4!1s8bH84dQUMpJosIN9GkuKDA!2e0!7i16384!8i8192?coh=205409&entry=ttu">delapidated mural on a derelict shop</a>). </p>
       <p>This is a project by <a href="https://ellis.scot">Jono Ellis</a>.</p>
     </div>
   </body>
