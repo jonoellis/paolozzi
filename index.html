@@ -15,13 +15,13 @@
       <p>
         Artist Sir Eduardo Paolozzi was a pioneer of pop art and one of
         Britain's greatest sculptors. Because of his importance, his works are
-        frequently bought, sold, loaned, and - crucially - relocated.
-        This page details the pieces on outdoor public
-        display around the world, and shows them through the medium of Google
-        Street View. 
+        frequently bought, sold, loaned, and - crucially - relocated. This page
+        details the pieces on outdoor public display around the world, and shows
+        them through the medium of Google Street View.
       </p>
       <p>
-        If you know of a Paolozzi sculpture that's on Street View but missing you can 
+        If you know of an outdoor Paolozzi sculpture that's missing, here you
+        can
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdxh2x_gk_yfr_lIe8XVMSCV0Ads-surfRFdFkycCnS3BLpZw/viewform?usp=sf_link"
           >submit it here</a
@@ -30,13 +30,13 @@
     </div>
 
     <div id="paolozzi"></div>
-<script>
-  fetch("paolozzi.json")
-    .then((response) => response.json())
-    .then((paolozziArray) => {
-      let generatedHTML = "";
-      paolozziArray.forEach((paolozzi, index) => {
-        const iframeHTML = `
+    <script>
+      fetch("paolozzi.json")
+        .then((response) => response.json())
+        .then((paolozziArray) => {
+          let generatedHTML = "";
+          paolozziArray.forEach((paolozzi, index) => {
+            const iframeHTML = `
           <iframe
             width="1000"
             height="550"
@@ -49,26 +49,31 @@
           </iframe>
         `;
 
-        const divHTML = `
+            const divHTML = `
           <div class="streetview">
             <h2>${paolozzi.title} (${paolozzi.year})</h2>
             <div class="location">${paolozzi.location}</div>
             <div class="iframe-container" data-index="${index}">
-              ${index === 0 ? iframeHTML : '<div class="iframe-placeholder">Click to load</div>'}
+              ${
+                index === 0
+                  ? iframeHTML
+                  : '<div class="iframe-placeholder">Click to load</div>'
+              }
             </div>
           </div>
         `;
 
-        generatedHTML += divHTML;
-      });
+            generatedHTML += divHTML;
+          });
 
-      document.getElementById("paolozzi").innerHTML = generatedHTML;
+          document.getElementById("paolozzi").innerHTML = generatedHTML;
 
-      const iframeContainers = document.querySelectorAll(".iframe-container");
-      iframeContainers.forEach((container, index) => {
-        if (index !== 0) {
-          container.addEventListener("click", () => {
-            const iframeHTML = `
+          const iframeContainers =
+            document.querySelectorAll(".iframe-container");
+          iframeContainers.forEach((container, index) => {
+            if (index !== 0) {
+              container.addEventListener("click", () => {
+                const iframeHTML = `
               <iframe
                 width="1000"
                 height="550"
@@ -80,16 +85,28 @@
               >
               </iframe>
             `;
-            container.innerHTML = iframeHTML;
+                container.innerHTML = iframeHTML;
+              });
+            }
           });
-        }
-      });
-    })
-    .catch((error) =>
-      console.error("Error fetching the JSON file:", error)
-    );
-</script>
+        })
+        .catch((error) =>
+          console.error("Error fetching the JSON file:", error)
+        );
+    </script>
 
-    <h3><a href="https://ellis.scot">Jono</a> made this</h3>
+    <div id="outro">
+      <p>
+        The spreadsheet of scultprures on Street View can be found here, and my
+        ongoing research and scupltures visible on Google Earth can be found
+        here. If you know of an outdoor Paolozzi sculpture that's missing here,
+        you can
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdxh2x_gk_yfr_lIe8XVMSCV0Ads-surfRFdFkycCnS3BLpZw/viewform?usp=sf_link"
+          >submit it here</a
+        >.
+      </p>
+      <p>This is a project by <a href="https://ellis.scot">Jono Ellis</a>.</p>
+    </div>
   </body>
 </html>
