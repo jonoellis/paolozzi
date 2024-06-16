@@ -10,7 +10,7 @@ body {
 h1 {
   font-family: "Press Start 2P", cursive;
   text-align: left;
-  padding-top:50px;
+  padding-top: 50px;
   margin-left: 150px;
   padding-bottom: 50px;
   font-size: 40px;
@@ -21,6 +21,9 @@ h2 {
   text-align: left;
   font-size: 30px;
 }
+.amber{
+  color:#FFBF00;
+}
 h3 {
   font-family: "Press Start 2P", cursive;
   text-align: left;
@@ -28,7 +31,7 @@ h3 {
   padding-bottom: 5px;
 }
 
-#paolozzi {
+#satellite {
   padding-top: 50px;
 }
 .streetview {
@@ -45,7 +48,7 @@ h3 {
   font-size: 24px;
 }
 
-#introduction {
+.text {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
@@ -55,6 +58,8 @@ h3 {
   background: white;
   margin-left: 140px;
   margin-right: 150px;
+  margin-bottom: 60px;
+
   padding: 10px;
 }
 
@@ -66,10 +71,8 @@ h3 {
   font-variation-settings: "slnt" 0;
   font-size: 24px;
   background: white;
-    padding-top:20px;
-    padding-bottom:20px;
-
-
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .iframe-placeholder {
   font-family: "Inter", sans-serif;
@@ -79,9 +82,9 @@ h3 {
   font-variation-settings: "slnt" 0;
   font-size: 24px;
   background: white;
-  padding-top:10px;
+  padding-top: 10px;
 }
 
 iframe {
-/*   margin-left: 150px; */
+  /*   margin-left: 150px; */
 }

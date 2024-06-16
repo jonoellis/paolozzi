@@ -11,7 +11,7 @@
       Street View
     </h1>
 
-    <div id="introduction">
+    <div id="introduction" class="text">
       <p>
         Artist Sir Eduardo Paolozzi was a pioneer of pop art and one of
         Britain's greatest sculptors. Because of his importance, his works are
@@ -97,9 +97,9 @@
     </script>
 
     
-    <div id="outliers">
+    <div id="outliers" class="text">
       <p>
-        So that's the current list of sulptures that are visible on Google Street View. A few others 
+        A few other Paolozzi sculptures are visible via aerial photography on Google Earth.
       </p>
     </div>
     
@@ -113,7 +113,7 @@
       earthArray.forEach((earth, index) => {
         const divHTML = `
           <div class="streetview">
-            <h2>${earth.title} (${earth.year})</h2>
+            <h2 class="amber">${earth.title} (${earth.year})</h2>
             <div class="location"><a href="${earth.link}">${earth.location}</a></div>
 
           </div>
@@ -129,11 +129,11 @@
 
     
     
-    <div id="outro">
+    <div id="outro" class="text">
       <p>
         The spreadsheet of scultprures on Street View can be found <a href="https://docs.google.com/spreadsheets/d/1pS0Zt8V66oOkTvnLSCG94J33dzKYjeZ-EvPfQbqQ0e4/edit?gid=0#gid=0">here</a>, and my
         ongoing research and scupltures visible on Google Earth can be found
-        <a href="https://docs.google.com/spreadsheets/d/1pS0Zt8V66oOkTvnLSCG94J33dzKYjeZ-EvPfQbqQ0e4/edit?gid=1380045345#gid=1380045345">here</a>. I'm not attempting to document every work by Paolozzi  If you know of an outdoor Paolozzi sculpture that's missing here,
+        <a href="https://docs.google.com/spreadsheets/d/1pS0Zt8V66oOkTvnLSCG94J33dzKYjeZ-EvPfQbqQ0e4/edit?gid=1380045345#gid=1380045345">here</a>. I'm not attempting to document every work by Paolozzi - just the public sculptures - so if you know of an outdoor Paolozzi sculpture that's missing,
         you can
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdxh2x_gk_yfr_lIe8XVMSCV0Ads-surfRFdFkycCnS3BLpZw/viewform?usp=sf_link"
