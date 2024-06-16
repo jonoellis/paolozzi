@@ -2,7 +2,6 @@
 * Add country flags?
 * Add the map back in?
 * Remove the errors
-* mobile friendly
 
 
 
@@ -12,3 +11,5 @@
 
 
 * Contact Paolozzi Foundation via https://www.linkedin.com/in/daniel-f-herrmann-9b678454/ or via davidlyon@calders.net or via https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5063771/trustees or 
+
+* mobile friendly
